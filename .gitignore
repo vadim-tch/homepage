@@ -1,0 +1,11 @@
+.DS_Store
+Thumbs.db
+
+*.swp
+.idea/
+.fleet/
+.vscode/
+
+build/
+.gradle/
+gradle/wrapper/gradle-wrapper.jar
