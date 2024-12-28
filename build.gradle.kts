@@ -16,6 +16,12 @@ application {
     applicationDefaultJvmArgs = listOf("-Dio.ktor.development=$isDevelopment")
 }
 
+ktor {
+    docker {
+        jreVersion.set(JavaVersion.VERSION_23)
+    }
+}
+
 repositories {
     mavenCentral()
 }
