@@ -18,7 +18,18 @@ application {
 
 ktor {
     docker {
+        localImageName.set("ghcr.io/vadim-tch/homepage")
+        imageTag.set("latest")
+
         jreVersion.set(JavaVersion.VERSION_23)
+
+        portMappings.set(listOf(
+            io.ktor.plugin.features.DockerPortMapping(
+                outsideDocker = 8080,
+                insideDocker = 80,
+                protocol = io.ktor.plugin.features.DockerPortMappingProtocol.TCP
+            )
+        ))
     }
 }
 
